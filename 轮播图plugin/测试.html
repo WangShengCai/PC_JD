@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图测试-单张</title>
+    <style>
+        .wrapper{
+            width:500px;
+            height:300px;
+            border-radius:10px;
+            border:1px solid black;
+            margin: 100px auto;
+        }
+        .demo{
+            width:300px;
+            height:150px;
+            border:1px solid black;
+            margin:100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+    </div>
+    <div class="demo">
+
+    </div>
+    <script src="./Utils/jquery-2.0.0.js"></script>
+    <script src="./Utils/slide.js"></script>
+    <script>
+        $('.wrapper').slider({
+            imgList: ['./images/pic1.jpg', './images/pic2.jpg', './images/pic3.jpg', './images/pic2.jpg', './images/pic3.jpg'],
+            width:500,
+            height:300,
+            isAuto: true,
+            animateType: 'animate',
+            direction: 'right'
+        })
+        $('.demo').slider({
+            imgList: ['./images/pic1.jpg', './images/pic2.jpg', './images/pic3.jpg', './images/pic2.jpg', './images/pic3.jpg'],
+            width:300,
+            height:150,
+            animateType: 'fade',
+            isAuto: 'true',
+            direction: 'right'
+        })
+    </script>
+</body>
+</html>
